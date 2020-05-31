@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
+import { connect } from "react-redux";
+
 function FilterForm(props) {
   const [currType, setCurrType] = useState(0);
+
   return (
     <div className="filter_form">
       <span>Отобразить только: </span>
@@ -21,6 +24,7 @@ function FilterForm(props) {
       <button
         className="filter_form_btn"
         onClick={props.filterReceptiesByType.bind(null, currType)}
+        disabled
       >
         Фильтр
       </button>
@@ -34,4 +38,10 @@ function FilterForm(props) {
   );
 }
 
-export default FilterForm;
+const mapStateToProps = (state) => {
+  return {
+    receptTypes: state.recepties.receptTypes,
+  };
+};
+
+export default connect(mapStateToProps, null)(FilterForm);

@@ -1,0 +1,34 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.modal_body {
+  text-align: center;
+  padding: 2rem;
+  width: 55rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  height: 37rem;
+}
+
+.modal_title {
+  margin-bottom: 2rem;
+}
+
+.modal_edit_form {
+  display: flex;
+  justify-content: space-around;
+  line-height: 2rem;
+}
+
+.modal_coll_two {
+  text-align: left;
+}

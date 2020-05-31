@@ -11,48 +11,48 @@
 }
 
 .recept_list {
-  margin-right: 30px;
-  border: 2px solid;
+  margin-right: 2rem;
+  border: 0.125rem solid;
   width: 50%;
-  height: 800px;
+  height: 50rem;
   overflow: scroll;
 }
 
 .recept_item {
-  margin: 30px;
-  padding: 15px;
+  margin: 2rem;
+  padding: 1rem;
   background: white;
-  height: 500px;
-  width: 400px;
-  border: 4px solid;
-  border-radius: 30px;
+  height: 31rem;
+  width: 25rem;
+  border: 0.25rem solid;
+  border-radius: 2rem;
 }
 
 .recept_title {
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 700;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.125rem solid;
 }
 
 .recept_footer {
-  height: 50px;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .recept_del_btn {
-  height: 50px;
-  width: 80px;
+  height: 3rem;
+  width: 5rem;
   transition: 0.3s;
 }
 
 .recept_del_btn:hover {
   cursor: pointer;
-  height: 40px;
-  width: 70px;
+  border: 0.125rem solid;
+  border-radius: 50%;
 }
 
 .recept_content {
@@ -67,49 +67,49 @@
 }
 
 .filter_form {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .filter_form_btn {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25rem;
+  height: 2rem;
+  border-radius: 0.6rem;
 }
 
 .add_form {
-  line-height: 30px;
+  line-height: 2rem;
 }
 
 .add_form_title {
-  font-size: 26px;
+  font-size: 1.6rem;
   text-align: center;
 }
 
 .form_coll_one,
 .form_coll_two {
-  margin-right: 30px;
+  margin-right: 2rem;
 }
 
 .add_form_input {
-  width: 270px;
+  width: 17rem;
 }
 
 .add_form_textarea {
-  height: 400px;
+  height: 25rem;
   resize: none;
 }
 
 .add_recept_btn {
-  margin-top: 30%;
-  height: 100px;
-  width: 100px;
-  border-radius: 20px;
+  margin-top: 10rem;
+  height: 6.25rem;
+  width: 6.25rem;
+  border-radius: 1.25rem;
   transition: 0.3s;
 }
 
 .add_recept_btn:hover {
-  font-size: 15px;
+  font-size: 0.6rem;
 }

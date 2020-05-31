@@ -1,0 +1,3 @@
+export const CREATE_RECEPT = "CREATE_RECEPT";
+export const DELETE_RECEPT = "DELETE_RECEPT";
+export const EDIT_RECEPT = "EDIT_RECEPT";

@@ -1,20 +1,25 @@
 import React from "react";
 import ReceptItem from "./ReceptItem";
 
-function ReceptList(props) {
+import { connect } from "react-redux";
+
+function ReceptList({ recepties, receptTypes }) {
   return (
     <div className="recept_list">
-      {props.recepties.map(function (item) {
+      {recepties.map(function (item) {
         return (
-          <ReceptItem
-            item={item}
-            key={item.id}
-            type={props.receptTypes[item.type]}
-          />
+          <ReceptItem item={item} key={item.id} type={receptTypes[item.type]} />
         );
       })}
     </div>
   );
 }
 
-export default ReceptList;
+const mapStateToProps = (state) => {
+  return {
+    recepties: state.recepties.recepties,
+    receptTypes: state.recepties.receptTypes,
+  };
+};
+
+export default connect(mapStateToProps, null)(ReceptList);

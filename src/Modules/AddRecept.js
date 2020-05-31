@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { connect } from "react-redux";
+import { addNewRecept } from "../redux/actions";
+
 function AddRecept(props) {
   const [title, setTitle] = useState("");
   const [type, setType] = useState(0);
@@ -8,7 +11,12 @@ function AddRecept(props) {
   function formSubmit(event) {
     event.preventDefault();
 
-    props.addNewRecept(1, title, type, text);
+    props.addNewRecept({
+      id: Date.now().toString(),
+      title,
+      type,
+      text,
+    });
 
     setTitle("");
     setType(0);
@@ -65,4 +73,14 @@ function AddRecept(props) {
   );
 }
 
-export default AddRecept;
+const mapStateToProps = (state) => {
+  return {
+    receptTypes: state.recepties.receptTypes,
+  };
+};
+
+const mapDispatchToProps = {
+  addNewRecept,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddRecept);
