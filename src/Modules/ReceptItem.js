@@ -14,7 +14,7 @@ function ReceptItem(props) {
       <div className="recept_content">
         <div
           className="recept_text"
-          dangerouslySetInnerHTML={{ __html: props.item.text }}
+          dangerouslySetInnerHTML={{ __html: props.item_text }}
         ></div>
         <div className="recept_footer">
           <div className="recept_id">ID: {props.item.id}</div>
@@ -35,7 +35,6 @@ function ReceptItem(props) {
 
 const mapStateToProps = (state) => {
   return {
-    recepties: state.recepties.recepties,
     receptTypes: state.recepties.receptTypes,
   };
 };

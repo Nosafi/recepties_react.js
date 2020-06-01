@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { connect } from "react-redux";
+import { filterReceptiesByType, filterToFalse } from "../redux/actions";
 
 function FilterForm(props) {
   const [currType, setCurrType] = useState(0);
@@ -23,14 +24,15 @@ function FilterForm(props) {
       </select>
       <button
         className="filter_form_btn"
-        onClick={props.filterReceptiesByType.bind(null, currType)}
-        disabled
+        onClick={() => {
+          props.filterReceptiesByType(currType);
+        }}
       >
         Фильтр
       </button>
       <button
         className="filter_form_btn"
-        onClick={props.filteredUpdate.bind(null, false)}
+        onClick={props.filterToFalse.bind(null)}
       >
         Сброс
       </button>
@@ -44,4 +46,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(FilterForm);
+const mapDispatchToProps = {
+  filterReceptiesByType,
+  filterToFalse,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FilterForm);

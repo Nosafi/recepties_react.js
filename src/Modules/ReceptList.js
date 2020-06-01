@@ -3,12 +3,21 @@ import ReceptItem from "./ReceptItem";
 
 import { connect } from "react-redux";
 
-function ReceptList({ recepties, receptTypes }) {
+function ReceptList(props) {
+  let currData = [];
+  if (props.isFiltered) currData = props.filteredRecepties;
+  else currData = props.recepties;
+
   return (
     <div className="recept_list">
-      {recepties.map(function (item) {
+      {currData.map(function (item) {
         return (
-          <ReceptItem item={item} key={item.id} type={receptTypes[item.type]} />
+          <ReceptItem
+            item={item}
+            item_text={item.text}
+            key={item.id}
+            type={props.receptTypes[item.type]}
+          />
         );
       })}
     </div>
@@ -17,7 +26,9 @@ function ReceptList({ recepties, receptTypes }) {
 
 const mapStateToProps = (state) => {
   return {
+    isFiltered: state.recepties.isFiltered,
     recepties: state.recepties.recepties,
+    filteredRecepties: state.recepties.filteredRecepties,
     receptTypes: state.recepties.receptTypes,
   };
 };

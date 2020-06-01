@@ -1,4 +1,10 @@
-import { CREATE_RECEPT, DELETE_RECEPT, EDIT_RECEPT } from "./types";
+import {
+  CREATE_RECEPT,
+  DELETE_RECEPT,
+  EDIT_RECEPT,
+  FILTER_RECEPTIES,
+  RESET_RECEPTIES,
+} from "./types";
 
 export function addNewRecept(recept) {
   return {
@@ -21,5 +27,18 @@ export function editRecept(index, new_Text) {
       index,
       new_Text,
     },
+  };
+}
+
+export function filterReceptiesByType(type) {
+  return {
+    type: FILTER_RECEPTIES,
+    payload: type,
+  };
+}
+
+export function filterToFalse() {
+  return {
+    type: RESET_RECEPTIES,
   };
 }

@@ -1,4 +1,10 @@
-import { CREATE_RECEPT, DELETE_RECEPT, EDIT_RECEPT } from "../types";
+import {
+  CREATE_RECEPT,
+  DELETE_RECEPT,
+  EDIT_RECEPT,
+  FILTER_RECEPTIES,
+  RESET_RECEPTIES,
+} from "../types";
 
 const defaultData = {
   recepties: [
@@ -33,6 +39,8 @@ const defaultData = {
       text: "Хлеб, мясо.",
     },
   ],
+  isFiltered: false,
+  filteredRecepties: [],
   receptTypes: [
     "Заготовка",
     "Выпечка и десерты",
@@ -71,6 +79,20 @@ export const receptiesReducer = (state = defaultData, action) => {
           }
           return item;
         }),
+      };
+    case FILTER_RECEPTIES:
+      return {
+        ...state,
+        isFiltered: true,
+        filteredRecepties: state.recepties.filter(function (item) {
+          if (item.type == action.payload) return item;
+        }),
+      };
+    case RESET_RECEPTIES:
+      return {
+        ...state,
+        isFiltered: false,
+        filteredRecepties: [],
       };
     default:
       return state;

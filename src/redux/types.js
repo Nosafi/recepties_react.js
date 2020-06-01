@@ -1,3 +1,6 @@
 export const CREATE_RECEPT = "CREATE_RECEPT";
 export const DELETE_RECEPT = "DELETE_RECEPT";
 export const EDIT_RECEPT = "EDIT_RECEPT";
+
+export const FILTER_RECEPTIES = "FILTER_RECEPTS";
+export const RESET_RECEPTIES = "RESET_RECEPTIES";
