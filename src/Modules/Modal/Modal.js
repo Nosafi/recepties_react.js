@@ -24,6 +24,7 @@ class Modal extends React.Component {
           className="recept_del_btn"
           src={Edit_Btn}
           alt="Редактировать"
+          title="Редактировать"
         />
 
         {this.state.isOpen && (
