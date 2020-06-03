@@ -4,6 +4,7 @@ import {
   EDIT_RECEPT,
   FILTER_RECEPTIES,
   RESET_RECEPTIES,
+  LOAD_DATA,
 } from "./types";
 
 export function addNewRecept(recept) {
@@ -40,5 +41,11 @@ export function filterReceptiesByType(type) {
 export function filterToFalse() {
   return {
     type: RESET_RECEPTIES,
+  };
+}
+
+export function loadData() {
+  return {
+    type: LOAD_DATA,
   };
 }

@@ -4,3 +4,6 @@ export const EDIT_RECEPT = "EDIT_RECEPT";
 
 export const FILTER_RECEPTIES = "FILTER_RECEPTS";
 export const RESET_RECEPTIES = "RESET_RECEPTIES";
+
+export const SET_RECEPTIES = "SET_RECEPTIES";
+export const LOAD_DATA = "LOAD_DATA";

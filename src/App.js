@@ -3,7 +3,16 @@ import ReceptList from "./Modules/ReceptList";
 import AddRecept from "./Modules/AddRecept";
 import FilterForm from "./Modules/FilterForm";
 
+import { useDispatch } from "react-redux";
+import { loadData } from "./redux/actions";
+
 function App() {
+  const dispatch = useDispatch();
+
+  (function test() {
+    dispatch(loadData());
+  })();
+
   return (
     <div className="wrapper">
       <div className="page_title">

@@ -4,41 +4,11 @@ import {
   EDIT_RECEPT,
   FILTER_RECEPTIES,
   RESET_RECEPTIES,
+  SET_RECEPTIES,
 } from "../types";
 
 const defaultData = {
-  recepties: [
-    {
-      id: 1,
-      type: 8,
-      title: "Бутерброд с колбасой",
-      text: "Хлеб, колбаса.",
-    },
-    {
-      id: 2,
-      type: 2,
-      title: "Бутерброд с маслом",
-      text: "Хлеб, масло.",
-    },
-    {
-      id: 3,
-      type: 8,
-      title: "Бутерброд с салом",
-      text: "Хлеб, сало.",
-    },
-    {
-      id: 6,
-      type: 2,
-      title: "Бутерброд с мёдом",
-      text: "Хлеб, мёд.",
-    },
-    {
-      id: 5,
-      type: 8,
-      title: "Бутерброд с мясом",
-      text: "Хлеб, мясо.",
-    },
-  ],
+  recepties: [],
   isFiltered: false,
   filteredRecepties: [],
   receptTypes: [
@@ -59,6 +29,9 @@ const defaultData = {
 
 export const receptiesReducer = (state = defaultData, action) => {
   switch (action.type) {
+    case SET_RECEPTIES:
+      console.log("loaded!");
+      return { ...state, recepties: action.payload };
     case CREATE_RECEPT:
       return { ...state, recepties: state.recepties.concat([action.payload]) };
     case DELETE_RECEPT:
