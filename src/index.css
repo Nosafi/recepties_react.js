@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #cbb697;
+}
+
+.page_title {
+  text-align: center;
+  margin: 1em 0 2rem 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: "Ultra", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+  text-shadow: 0 0.13rem white, 0 0.19px #777;
+}
+
 .page_content,
 .add_form {
   display: flex;
@@ -75,6 +91,7 @@
 .recept_del_btn:hover {
   cursor: pointer;
   border: 2px solid;
+  border-color: #033972;
   border-radius: 50%;
 }
 

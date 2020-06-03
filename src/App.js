@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="page_title">
-        <h1>База Рецептов</h1>
+        <h1>Ваши рецепты</h1>
       </div>
       <div className="page_content">
         <ReceptList />
