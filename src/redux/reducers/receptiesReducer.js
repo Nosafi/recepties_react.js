@@ -30,7 +30,6 @@ const defaultData = {
 export const receptiesReducer = (state = defaultData, action) => {
   switch (action.type) {
     case SET_RECEPTIES:
-      console.log("loaded!");
       return { ...state, recepties: action.payload };
     case CREATE_RECEPT:
       return { ...state, recepties: state.recepties.concat([action.payload]) };

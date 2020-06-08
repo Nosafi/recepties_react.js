@@ -17,14 +17,10 @@ export function* sagaWatcher() {
 }
 
 function* loadFromLocal() {
-  console.log("asdasd");
   let new_data = JSON.parse(localStorage.getItem("diplom_recepries"));
-  console.log(new_data);
-
   if (new_data == null) {
     new_data = [];
   }
-  console.log(new_data);
 
   yield put({
     type: SET_RECEPTIES,

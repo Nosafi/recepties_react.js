@@ -45,7 +45,6 @@ export function filterToFalse() {
 }
 
 export function loadData() {
-  console.log("start loading@");
   return {
     type: LOAD_DATA,
   };
