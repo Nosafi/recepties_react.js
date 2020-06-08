@@ -5,8 +5,11 @@ import { connect } from "react-redux";
 
 function ReceptList(props) {
   let currData = [];
-  if (props.isFiltered) currData = props.filteredRecepties;
-  else currData = props.recepties;
+  if (props.isFiltered) {
+    currData = props.filteredRecepties;
+  } else {
+    currData = props.recepties;
+  }
 
   return (
     <div className="recept_list">

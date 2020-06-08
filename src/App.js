@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReceptList from "./Modules/ReceptList";
 import AddRecept from "./Modules/AddRecept";
 import FilterForm from "./Modules/FilterForm";
@@ -9,9 +9,9 @@ import { loadData } from "./redux/actions";
 function App() {
   const dispatch = useDispatch();
 
-  (function test() {
+  useEffect(() => {
     dispatch(loadData());
-  })();
+  });
 
   return (
     <div className="wrapper">

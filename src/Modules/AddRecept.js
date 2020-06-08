@@ -15,13 +15,12 @@ function AddRecept(props) {
       id: Date.now().toString(),
       title,
       type,
-      text,
+      text: text.split("\n").join("<br>"),
     });
 
     setTitle("");
     setType(0);
     setText("");
-    document.querySelector(".add_form_textarea").value = "";
   }
 
   return (
@@ -60,8 +59,9 @@ function AddRecept(props) {
           <br />
           <textarea
             className="add_form_input add_form_textarea"
+            value={text}
             onChange={(event) => {
-              setText(event.target.value.split("\n").join("<br>"));
+              setText(event.target.value);
             }}
           />
         </div>
