@@ -9,6 +9,17 @@ body {
   background: #cbb697;
 }
 
+input[type="text"],
+textarea,
+select {
+  padding: 2px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .page_title {
   text-align: center;
   margin: 1em 0 2rem 0;
@@ -24,6 +35,7 @@ body {
 .page_content,
 .add_form {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .recept_list {
@@ -131,6 +143,10 @@ body {
 .form_coll_one,
 .form_coll_two {
   margin-right: 2rem;
+}
+
+.form_coll_one {
+  line-height: 2.4rem;
 }
 
 .add_form_input {

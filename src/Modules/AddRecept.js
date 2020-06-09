@@ -44,6 +44,7 @@ function AddRecept(props) {
           <br />
           <select
             className="add_form_input"
+            value={type}
             onChange={(event) => {
               setType(event.target.value);
             }}

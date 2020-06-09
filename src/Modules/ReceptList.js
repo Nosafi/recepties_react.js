@@ -13,6 +13,9 @@ function ReceptList(props) {
 
   return (
     <div className="recept_list">
+      <span style={{ position: "fixed" }}>
+        Рецептов отображено: {currData.length}.
+      </span>
       {currData.map(function (item) {
         return (
           <ReceptItem

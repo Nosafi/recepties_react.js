@@ -22,7 +22,14 @@ function ReceptItem(props) {
             src={Del_Btn}
             alt="Удалить"
             title="Удалить"
-            onClick={props.delRecept.bind(null, props.item.id)}
+            onClick={() => {
+              const resultConfirm = window.confirm(
+                "Удалить " + props.item.title + " ?"
+              );
+              if (resultConfirm) {
+                props.delRecept(props.item.id);
+              }
+            }}
           />
         </div>
       </div>
