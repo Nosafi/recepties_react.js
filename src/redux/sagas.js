@@ -18,7 +18,7 @@ export function* sagaWatcher() {
 
 function* loadFromLocal() {
   let new_data = JSON.parse(localStorage.getItem("diplom_recepries"));
-  if (new_data == null) {
+  if (new_data === null || new_data === undefined) {
     new_data = [];
   }
 

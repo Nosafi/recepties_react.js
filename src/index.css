@@ -131,6 +131,10 @@ select {
   border-radius: 0.6rem;
 }
 
+.add_new_recept {
+  padding: 2rem 0 0 0;
+}
+
 .add_form {
   line-height: 2rem;
 }

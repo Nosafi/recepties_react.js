@@ -46,7 +46,7 @@ export const receptiesReducer = (state = defaultData, action) => {
       return {
         ...state,
         recepties: state.recepties.map(function (item) {
-          if (item.id == action.payload.index) {
+          if (item.id === action.payload.index) {
             item.text = action.payload.new_Text;
           }
           return item;
@@ -57,7 +57,7 @@ export const receptiesReducer = (state = defaultData, action) => {
         ...state,
         isFiltered: true,
         filteredRecepties: state.recepties.filter(function (item) {
-          if (item.type == action.payload) return item;
+          if (Number(item.type) === Number(action.payload)) return item;
         }),
       };
     case RESET_RECEPTIES:

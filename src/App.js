@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     dispatch(loadData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="wrapper">
